@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+  
+* {
+    /* position: relative; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', serif;
+    font-size: 18px;
+    background: grey;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+.main {
+    min-width: 400px;
+    max-width: 1100px;
+    overflow: visible;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 95vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 0.5em;
+    color: white;
+}
+
+.cols-2 {
+    width: 100%;
+    height: 75vh;
+    margin-bottom: 1em;
+    display: flex;
+    background: white;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;    
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.cols-2 .item {
+    min-width: 250px;
+    min-height: 250px;
+    padding: 1em;
+    margin-right: 1em;
+    flex: 1;
+}
+
+.cols-2 .item:last-of-type {
+    margin-right: 0;
+}
+
+.cols-2:nth-of-type(odd) {
+    flex-direction: row-reverse;
+}
+
+.image {    
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 0.5em;
+}  
+
+.image-1 {
+    background-image: url(../img/image-1.jpg);
+    background-position: 60% 10%;
+}
+
+.image-2 {
+    background-image: url(../img/image-2.jpg);
+    background-position: 40% 10%;
+}
+
+.image-3 {
+    background-image: url(../img/image-3.jpg);
+    background-position: 20% 50%;
+}
+
+.image-4 {
+    background-image: url(../img/image-4.jpg);
+    background-position: 40% 80%;
+}
+
+.footer {
+    margin-bottom: 1em;
+    width: 100%;
+    height: 30vh;
+    background: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 0.5em;
+}
+
+@media (max-width: 600px) {
+    .header,
+    .cols-2,
+    .footer {
+        margin: 1em auto;
+        width: 90%;
+    }
+
+    .cols-2 {        
+        height: 130vh;
+        flex-direction: column;
+    }
+
+    .cols-2:nth-of-type(odd) {
+        flex-direction: column;
+    }
+
+    .cols-2 h1 {
+        margin: 0;
+    }
+
+    .cols-2 .item {
+        width: 100%;
+        margin-bottom: 1em;
+        flex: 1;
+    }
+}
